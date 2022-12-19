@@ -20,10 +20,11 @@ var saveToDB = (month, category, amount) => {
 };
 
 var updateTarget = (month, category, amount) => {
-
+  console.log('monthtesting', month);
   // console.log('testing', Transaction.find({month:month, category:'Target'}));
-  Transaction.find({month:month, category:'Target'})
+  Transaction.find({date:month, category:'Target'})
     .then((result)=> {
+
       console.log('applehere',result);
       if (result.length === 0) {
         saveToDB(month, category, amount);

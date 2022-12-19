@@ -18,18 +18,20 @@ const App = (props) => {
 
   return (
     <div>
-      <div>Money Saving</div>
+      {/* <div id='title'>2022 Account</div> */}
       <br></br>
-      <div>
-        <Date month = {month} setMonth = {setMonth} setTarget={setTarget} setTotalIncome={setTotalIncome} setTotalExpense={setTotalExpense}/>
+      <div className='date'>
+        <Date month={month} setMonth={setMonth} setTarget={setTarget} setTotalIncome={setTotalIncome} setTotalExpense={setTotalExpense} />
       </div>
       <br></br>
-      <div>
-        <Transaction month={month} setTarget={setTarget} setTotalIncome={setTotalIncome} setTotalExpense={setTotalExpense} />
-      </div>
-      <br></br>
-      <div>
-        <Dashboard target={target} totalIncome={totalIncome} totalExpense={totalExpense} />
+      <div className='show'>
+        {/* <div className='card'> */}
+          <Transaction month={month} setTarget={setTarget} setTotalIncome={setTotalIncome} setTotalExpense={setTotalExpense} />
+        {/* </div> */}
+        <br></br>
+        <div className='card'>
+          <Dashboard target={target} totalIncome={totalIncome} totalExpense={totalExpense} />
+        </div>
       </div>
     </div>
   )

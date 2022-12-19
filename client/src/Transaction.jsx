@@ -57,7 +57,7 @@ var Transaction = (props) => {
   };
 
   return (
-    < div >
+    < div className='card'>
       <label>
         Category:
         <select value={inputCategory} onChange={(e) => setInputCategory(e.target.value)}>
